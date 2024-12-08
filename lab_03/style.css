@@ -1,0 +1,156 @@
+body {
+  background-color: #0a1223;
+}
+
+nav {
+  text-align: right;
+
+  ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+          display: inline;
+          margin-right: 30px;
+      }
+  }
+
+  a {
+      text-decoration: none;
+      color: #484747;
+  }
+}
+
+main {
+  width: 100%;
+  margin-bottom: 200px;
+
+  header {
+      text-align: center;
+      margin: 100px 0;
+  }
+
+  .article-section {
+      .fact {
+          .content-wrapper {
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+
+              &.reverse {
+                  flex-direction: row-reverse;
+              }
+          }
+
+          .text-box {
+              h2 {
+                  width: 600px;
+                  background: linear-gradient(to right, #fff, #484747);
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+              }
+              p {
+                  width: 600px;
+              }
+          }
+
+          .image-box {
+              img {
+                  width: 600px;
+              }
+          }
+      }
+  }
+}
+
+h1 {
+  font-size: xx-large;
+  color: #fff;
+}
+
+p {
+  color: #484747;
+}
+
+hr {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  nav {
+      text-align: center;
+  }
+
+  main {
+      .article-section {
+          .fact {
+              .content-wrapper {
+                  display: block;
+
+                  .image-box {
+                      text-align: center;
+                  }
+
+                  .text-box {
+                      text-align: center;
+                      display: flex;
+                      justify-content: center;
+                  }
+
+                  &.reverse {
+                      flex-direction: column;
+                  }
+              }
+          }
+      }
+  }
+}
+
+@media (max-width: 610px) {
+  body {
+      background-color: #fff;
+  }
+
+  hr {
+      display: block;
+  }
+
+  nav {
+      text-align: left;
+
+      ul {
+          padding: 0;
+
+          li {
+              display: block !important;
+              margin-bottom: 20px;
+          }
+      }
+  }
+
+  header {
+      h1 {
+          color: black;
+      }
+  }
+
+  .article-section {
+      .fact {
+          img {
+              max-width: 100%;
+          }
+
+          h2 {
+              max-width: 310px;
+              color: #484747;
+              -webkit-text-fill-color: unset !important;
+          }
+
+          p {
+              max-width: 310px;
+          }
+      }
+  }
+}
+
+
